@@ -15,17 +15,21 @@
    <center>
         <h1 style="color:green">House Prediciton Model</h1>
         <br>
-        <form action="" method="post">
-            <input class="input-group-text" placeholder="Avg Area Income" type="text" name="income"></input>
-            <input class="input-group-text" placeholder="Ave Area House Age" type="text" name="age"></input>
-            <input class="input-group-text" placeholder="Avg House Rooms" type="text" name="rooms"></input>
-            <input class="input-group-text" placeholder="Avg House Bed Rooms" type="text" name="bed_rooms"></input>
-            <input class="input-group-text" placeholder="Avg Are Population" type="text" name="population"></input>
+        <form action="{{url_for('predict')}}" method="post">
+            <input class="input-group-text" placeholder="Pregnancies" type="text" name="p"></input>
+            <input class="input-group-text" placeholder="Glucose" type="text" name="g"></input>
+            <input class="input-group-text" placeholder="BloodPressure" type="text" name="b"></input>
+            <input class="input-group-text" placeholder="SkinThickness" type="text" name="s"></input>
+            <input class="input-group-text" placeholder="Insulin" type="text" name="i"></input>
+            <input class="input-group-text" placeholder="BMI" type="text" name="bm"></input>
+            <input class="input-group-text" placeholder="DiabetesPedigreeFunction" type="text" name="d"></input>
+            <input class="input-group-text" placeholder="Age" type="text" name="a"></input>
+
             <button class="btn btn-success" type="submit">Predict</button>
         </form>
         <br>
         <h4>
-            
+            {{text}}
         </h4>
     </center>
 </body>
